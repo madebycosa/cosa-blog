@@ -1,0 +1,8 @@
+<body>
+   <draggable id="example-3" v-model="fm_data" ghost-class="ghost" group="people" @start="drag=true" @end="onEnd">
+   <transition-group type="transition" name="flip-list" >
+      <div v-bind="{ 'index': index}" class="sortable" v-for="(item, index) in items" :key="item.fieldData.id_cliente" v-on:click="showCard(item.fieldData.id_cliente)"> {{item.fieldData.posizione }} {{ item.fieldData.ragione_sociale }}
+      </div>
+  </transition-group>
+  </draggable>
+</body>
